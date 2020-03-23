@@ -9,8 +9,13 @@ class ProductsController extends Controller
 {
     //
     public function index() {
-        $products = Product::all();
+        $products = Product::Paginate(6);
+        return view('products.index',compact('products'));
+    }
 
-        return view('products.index',['products' => $products]);
+    public function show($id) {
+
+        $products = Product::findorFail($id);
+        return view('products.show', compact('products'));
     }
 }
