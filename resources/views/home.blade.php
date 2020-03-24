@@ -15,7 +15,7 @@
                     @endif
 
                     ログインできました。
-                    <a href="producs">商品一覧</a>
+                    <a href="/">商品一覧</a>
                 </div>
             </div>
         </div>
